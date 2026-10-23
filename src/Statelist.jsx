@@ -1,6 +1,11 @@
 
 function Statelist() {
 
+    return (
+        <>
+            <h2>State List</h2>
+        </>
+    );
 }
 
-export default Slist;
+export default Statelist;

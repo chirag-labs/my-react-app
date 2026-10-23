@@ -3,6 +3,9 @@ import './App.css'
 import Register from "./Register";
 import Home from "./Home";
 import Login from "./Login";
+import Slist from "./Statelist";
+import Llist from "./Languagelist";
+import Clist from "./Countrylist"
 import AddCountry from "./crud/country/AddCountry";
 import DeleteCountry from "./crud/country/DeleteCountry";
 import EditCountry from "./crud/country/EditCountry";
@@ -17,6 +20,7 @@ import DeleteLanguage from "./crud/language/DeleteLanguage";
 function App() {
   return (
     <>
+      <h1>Main</h1>
       <Routes>
         <Route path="/" exact element={<Home />}/>
         <Route path="/register" exact element={<Register />}/>
