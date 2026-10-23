@@ -6,9 +6,9 @@ function EditLanguage() {
       <main>
         <h2>Edit Language</h2>
         <hr />
-        <htmlform>
-          <div classNameName="htmlformitem">
-            <label htmlhtmlFor="langcode">Language Code:</label>
+        <form>
+          <div className="formitem">
+            <label htmlFor="langcode">Language Code:</label>
             <input
               type="text"
               id="langcode"
@@ -17,8 +17,8 @@ function EditLanguage() {
               required
             />
           </div>
-          <div classNameName="htmlformitem">
-            <label htmlhtmlFor="langname">Language Name:</label>
+          <div className="formitem">
+            <label htmlFor="langname">Language Name:</label>
             <input
               type="text"
               id="langname"
@@ -27,8 +27,8 @@ function EditLanguage() {
               required
             />
           </div>
-          <div classNameName="htmlformitem">
-            <label htmlhtmlFor="status">Status:</label>
+          <div className="formitem">
+            <label htmlFor="status">Status:</label>
             <input
               type="text"
               id="status"
@@ -37,13 +37,13 @@ function EditLanguage() {
               required
             />
           </div>
-          <div classNameName="htmlformbutton">
+          <div className="formbutton">
             <button>
               <Link to="/language">Back</Link>
             </button>
             <button type="submit">Update</button>
           </div>
-        </htmlform>
+        </form>
       </main>
     </>
   );

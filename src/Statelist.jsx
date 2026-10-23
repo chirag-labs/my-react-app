@@ -8,7 +8,7 @@ function Statelist() {
           <Link to="/addState">Add State</Link>
         </button>
         <hr />
-        <section classNameNameName="statelist">
+        <section className="statelist">
           <table>
             <thead>
               <tr>

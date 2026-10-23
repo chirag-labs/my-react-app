@@ -6,9 +6,9 @@ function EditState() {
       <main>
         <h2>Edit State</h2>
         <hr />
-        <htmlform>
-          <div classNameNameName="htmlformitem">
-            <label htmlhtmlFor="country">Country Name:</label>
+        <form>
+          <div className="formitem">
+            <label htmlFor="country">Country Name:</label>
             <input
               type="text"
               id="country"
@@ -17,8 +17,8 @@ function EditState() {
               required
             />
           </div>
-          <div classNameNameName="htmlformitem">
-            <label htmlhtmlFor="state">State Name:</label>
+          <div className="formitem">
+            <label htmlFor="state">State Name:</label>
             <input
               type="text"
               id="state"
@@ -27,13 +27,13 @@ function EditState() {
               required
             />
           </div>
-          <div classNameNameName="htmlformbutton">
+          <div className="formbutton">
             <button>
               <Link to="/state">Back</Link>
             </button>
             <button type="submit">Update</button>
           </div>
-        </htmlform>
+        </form>
       </main>
     </>
   );
