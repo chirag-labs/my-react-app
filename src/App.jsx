@@ -1,4 +1,5 @@
-import {Route,Routes} from "react-router-dom";
+import {Route,Routes,Link} from "react-router-dom";
+import { useState } from "react";
 import './App.css'
 import Register from "./Register";
 import Home from "./Home";
@@ -16,10 +17,45 @@ import AddLanguage from "./crud/language/AddLanguage";
 import EditLanguage from "./crud/language/EditLanguage";
 import DeleteLanguage from "./crud/language/DeleteLanguage";
 
-
-function App() {
+function Header(){
   return (
     <>
+    <header>
+      <h1>
+        <Link to="/">CMS</Link>
+      </h1>
+      <nav>
+        <ul>
+          <li>
+            <Link to="/state">State</Link>
+          </li>
+          <li>
+            <Link to="/language">Language</Link>
+          </li>
+          <li>
+            <Link to="/country">Country</Link>
+          </li>
+          <li>
+            <Link to="/">Dashboard</Link>
+          </li>
+          <li>
+            <Link>User</Link>
+          </li>
+          <li>
+            <Link>Logout</Link>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    </>
+  );
+}
+function App() {
+  const [userData , setUserData] = useState([]);
+  
+  return (
+    <>
+      <Header />
       <h1>Main</h1>
       <Routes>
         <Route path="/" exact element={<Home />}/>

@@ -1,0 +1,121 @@
+body{
+    box-sizing: border-box;
+    background-color: antiquewhite;
+}
+header{
+    background-color: wheat;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 10px;
+}
+
+header>h1{
+    text-align: center;
+}
+
+ul{
+    margin:1px;
+    padding: 0px;
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap:10px;
+}
+
+.dash{
+    display:grid;
+    grid-template-columns: auto auto ;
+    gap:10px;
+    padding:10px;
+}
+
+.card{
+    padding:10px;
+}
+
+hr{
+    border:none;
+    height:2px;
+    background-color: skyblue;
+}
+
+thead{
+    background-color: lightgray;
+}
+
+th,td{
+    padding:10px;
+}
+
+.formitem{
+    display:flex;
+    flex-direction: column;
+    gap:5px;
+    justify-content: center;
+}
+
+.formbutton{
+    display:flex;
+    flex-direction: row;
+}
+
+form{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.login-box{
+    background-color: whitesmoke;
+    padding:10px;
+    width:max-content;
+    height: max-content;
+    margin: 20px auto;
+}
+
+.login-box p{
+    text-align: center;
+    color: gray;
+}
+
+.login-box input{
+    margin-bottom: 10px;
+}
+
+.login-box button{
+   display: block;
+   margin:0 auto;
+}
+
+.card{
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: gray 2px 0px 0px 0px inset;
+}
+
+.data{
+    font-weight: 600;
+    font-size: x-large;
+}
+
+#loginForm{
+    padding:10px;
+    width: max-content;
+    height: max-content;
+
+}
+
+.loginItem{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap:10px;
+    padding:10px;
+    width: max-content;
+    height: max-content;
+
+}

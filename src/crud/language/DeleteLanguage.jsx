@@ -8,4 +8,4 @@ function DeleteLanguage(){
     );
 }
 
-export default DeleteLanguage();
+export default DeleteLanguage;
