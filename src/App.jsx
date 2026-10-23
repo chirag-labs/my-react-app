@@ -19,10 +19,12 @@ import EditLanguage from "./crud/language/EditLanguage";
 import DeleteLanguage from "./crud/language/DeleteLanguage";
 
 function App() {
-  const [userData, setUserData] = useState([]);
-  const [stateData, setStateData] = useState([]);
-  const [countryData, setCountryData] = useState([]);
-  const [languageData, setLanguageData] = useState([]);
+  let [userData, setUserData] = useState([]);
+  let [stateData, setStateData] = useState([]);
+  let [countryData, setCountryData] = useState([]);
+  let [languageData, setLanguageData] = useState([]);
+
+  userData = [{id:1,uname:'chirag',email:'chirag@gmail.com',password:"9090"}];
 
   return (
     <>
