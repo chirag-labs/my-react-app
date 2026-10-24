@@ -1,6 +1,28 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
-function Header(){
+function Header({userData,setUserData}){
+  const navigate = useNavigate();
+
+  const handleLogout = (e) => {
+    e.preventDefault();
+    const user = findLoggedUser();
+    setUserData(userData[user].islogged="false");
+    globalThis.alert("you are being redirected to login page.");
+
+    navigate("/login");
+    
+  }
+  const findLoggedUser = ()=> {
+  
+    for(let user of userData){
+      let index = userData.indexOf(user);
+
+      if(userData[index].islogged === 'true')
+      {
+        return index;
+      }
+    }
+  }
   return (
     <>
     <header>
@@ -22,10 +44,10 @@ function Header(){
             <Link to="/">Dashboard</Link>
           </li>
           <li>
-            <Link>User</Link>
+            <Link to="/userProfile">User</Link>
           </li>
           <li>
-            <Link to="/login">Logout</Link>
+            <button onClick={handleLogout}>Log out</button>
           </li>
         </ul>
       </nav>

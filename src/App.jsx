@@ -8,6 +8,7 @@ import Login from "./Login";
 import Slist from "./Statelist";
 import Llist from "./Languagelist";
 import Clist from "./Countrylist";
+import Userprofile from "./Userprofile";
 import AddCountry from "./crud/country/AddCountry";
 import DeleteCountry from "./crud/country/DeleteCountry";
 import EditCountry from "./crud/country/EditCountry";
@@ -18,22 +19,23 @@ import AddLanguage from "./crud/language/AddLanguage";
 import EditLanguage from "./crud/language/EditLanguage";
 import DeleteLanguage from "./crud/language/DeleteLanguage";
 
+
 function App() {
   let [userData, setUserData] = useState([]);
   let [stateData, setStateData] = useState([]);
   let [countryData, setCountryData] = useState([]);
   let [languageData, setLanguageData] = useState([]);
+  userData = [{id:1,uname:'chirag',email:'chirag@gmail.com',password:"9090",islogged:"false"}];
 
-  userData = [{id:1,uname:'chirag',email:'chirag@gmail.com',password:"9090"}];
 
   return (
     <>
-      <Header />
+      <Header userData={userData} setUserData={setUserData}/>
       <Routes>
         <Route
           path="/"
           exact
-          element={<Home userData={userData} setUserData={setUserData} />}
+          element={<Home userData={userData} setUserData={setUserData}  />}
         />
         <Route
           path="/register"
@@ -43,7 +45,7 @@ function App() {
         <Route
           path="/login"
           exact
-          element={<Login userData={userData} setUserData={setUserData} />}
+          element={<Login userData={userData} setUserData={setUserData}/>}
         />
         <Route
           path="/state"
@@ -148,6 +150,10 @@ function App() {
             />
           }
         />
+      <Route
+        path = "/userProfile"
+        exact element={<Userprofile userData={userData}/>}
+      />
       </Routes>
     </>
   );

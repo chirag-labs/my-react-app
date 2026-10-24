@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
-function Login({userData}) {
+function Login({userData,setUserData}) {
 
   let [email,setEmail] = useState('');
   let [password,setPassword] = useState('');
@@ -12,7 +12,7 @@ function Login({userData}) {
     {
       if(email === user.email)
       {
-        return user;
+        return userData.indexOf(user);
       }
     }
     return null;
@@ -25,9 +25,12 @@ function Login({userData}) {
 
     const user = findUser();
     console.log("user",user);
-    if(user && user.password === password)
+    setUserData(userData[user].islogged="true");
+    console.log(userData);
+    if(userData[user].password === password)
     {
       console.log("Login Successful!",user);
+      
       navigate("/");
     }else{
       console.log("Invalid email or password");
